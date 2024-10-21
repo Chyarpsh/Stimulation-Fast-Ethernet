@@ -1,16 +1,51 @@
-This project simulates the Fast Ethernet using multiple processes on UNIX systems. Each station in the Ethernet is simulated by a process, and the communication switch is also represented by a process. The simulation allows communication between stations via the switch, using socket programming with either TCP or UDP.
+Program files:
+1) CSP.c
+2) SP.c
 
-Project Details
-Features
-Classical vs. Fast Ethernet: This project simulates Fast Ethernet (IEEE 802.3u), a collision-free protocol that operates at 100 Mbps.
-Processes:
-Station Process (SP): Each station is simulated by a process. The number of stations is configurable, with a maximum of 10.
-Communication Switch Process (CSP): This process simulates the Ethernet switch, managing communication between stations.
-Frame Types:
-Request Frame: Sent by SP to CSP for permission to send a data frame.
-Data Frame: Contains the message from one station to another.
-Positive/Negative Reply: Sent by CSP to SP in response to request frames.
-Requirements
-Operating System: Linux (CS Department Linux Lab)
-Programming Language: C/C++
-Socket Programming: Inter-process communication using UNIX sockets with TCP/UDP.
+Simulation input files for Station Process:
+1) StationProcess1.txt
+2) StationProcess2.txt
+3) StationProcess3.txt
+4) StationProcess4.txt
+5) StationProcess5.txt
+6) StationProcess6.txt
+7) StationProcess7.txt
+8) StationProcess8.txt
+9) StationProcess9.txt
+10) StationProcess10.txt
+
+Output log file of CommunicationBusProcess:
+CommunicationSwitchProcess_OUTPUT.txt
+
+Output log file of StationProcess:
+StationProcess_OUTPUT.txt
+
+
+Steps to follow
+
+STEP1:
+Compile the CSP.c program:
+"$gcc CSP.c -o csp"
+
+STEP2:
+Complie the SP.c program:
+"$gcc SP.c -o sp"
+
+STEP3:
+Execute the CommunicationBusProcess.c program:
+
+./csp 2655
+
+STEP4:
+Execute the StationProcess program for different stations simultaneously:
+
+./sp 2655 1 &
+./sp 2655 2 &
+./sp 2655 3 &
+./sp 2655 4 &
+./sp 2655 5 &
+./sp 2655 6 &
+./sp 2655 7 &
+./sp 2655 8 &
+./sp 2655 9 &
+./sp 2655 10
