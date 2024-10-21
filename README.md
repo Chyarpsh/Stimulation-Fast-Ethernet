@@ -1,4 +1,4 @@
-Fast Ethernet Simulation
+
 This project simulates the Fast Ethernet using multiple processes on UNIX systems. Each station in the Ethernet is simulated by a process, and the communication switch is also represented by a process. The simulation allows communication between stations via the switch, using socket programming with either TCP or UDP.
 
 Project Details
